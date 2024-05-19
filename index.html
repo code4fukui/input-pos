@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+<title>input-pos</title>
+</head><body>
+<h1>input-pos</h1>
+
+<script type="module" src="./input-pos.js"></script>
+
+<input-pos class=vertical id="ip1"></input-pos>
+<div id=div1></div>
+<input-pos class=vertical id="ip2"></input-pos>
+<div id=div2></div>
+
+<div class=p>
+<input-pos class=horizontal id="ip3"></input-pos>
+<div id=div3></div>
+</div>
+<div class=p>
+<input-pos class=horizontal id="ip4"></input-pos>
+<div id=div4></div>
+</div>
+
+<hr>
+<a href=https://github.com/code4fukui/input-pos/>src on GitHub</a>
+
+<style>
+.vertical {
+  width: 90vw;
+  height: 4em;
+  background-color: #222;
+}
+.horizontal {
+  width: 4em;
+  height: 50vh;
+  background-color: #222;
+}
+.p {
+  width: 40vw;
+  display: inline-block;
+  vertical-align: top;
+}
+a {
+  color: gray !important;
+}
+</style>
+
+<script type="module">
+ip1.oninput = () => {
+  console.log(ip1.value);
+  div1.textContent = ip1.value;
+};
+ip2.oninput = () => {
+  div2.textContent = ip2.value;
+};
+ip3.oninput = () => {
+  div3.textContent = ip3.value;
+};
+ip4.oninput = () => {
+  div4.textContent = ip4.value;
+};
+</script>
