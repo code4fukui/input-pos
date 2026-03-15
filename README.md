@@ -1,4 +1,7 @@
 # input-pos
+
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 A custom HTML element for creating a 2D input position control.
 
 ## Demo
@@ -32,6 +35,7 @@ console.log(posInput.value); // Outputs the current position value (between 0 an
 You can also listen for the `oninput` event to be notified when the position is changed:
 
 ```javascript
+posInput = document.getElementById('position-input');
 posInput.oninput = (event) => {
   console.log(`Position: (${event.valuex}, ${event.valuey})`);
 };
